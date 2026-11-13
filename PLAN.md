@@ -7,6 +7,7 @@ A desktop app for personal Bible study: organized study notes, a random topic pi
 ## Decisions so far
 
 - **Platform:** Desktop app, Mac only
+- **Language and framework:** Tauri with TypeScript for the interface, and a small amount of Rust underneath. You're learning as we build, so code should stay readable and well commented.
 - **Storage:** This device only, with export and backup to a file
 - **Weekly to-do:** Recurring templates. You set your routine once, the app creates the tasks each week, and you add the specific chapters or articles. Nothing is pulled from jw.org, so there's no conflict with its Terms of Use.
 - **Random topic:** Skips recently studied topics and favors ones not yet covered
@@ -105,7 +106,8 @@ The goal is that AI can be added later without reworking the app.
 
 ## Feature 5 — Foundation
 
-- [ ] Choose a desktop framework. Candidates: native Swift (direct calendar access, Mac only), Tauri or Electron (both need a small native bridge for calendar access)
+- [x] Desktop framework chosen: Tauri + TypeScript
+- [ ] Apple Calendar (later) will need a small Swift add-on, because Tauri can't reach Calendar directly
 - [ ] Local database (for example SQLite)
 - [ ] Backup and restore
 
