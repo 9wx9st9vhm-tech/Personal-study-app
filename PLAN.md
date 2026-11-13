@@ -83,8 +83,8 @@ Your meeting parts arrive in Apple Calendar from a congregation scheduling app. 
 - [ ] View past sessions
 - [ ] Feeds the random topic button's "studied recently" check
 - [ ] Habit tracker: a record of which days you used the app (no streak count)
-- [ ] A day is checked off automatically the first time you click anything in the app that day
-- [ ] Only one check-off per day, however many clicks
+- [ ] A day is checked off automatically when you start a note page that day
+- [ ] Only one check-off per day
 - [ ] Days are counted by your Mac's local date and time
 
 ## Feature 3d — Bible Reading Tracker
@@ -113,11 +113,19 @@ The goal is that AI can be added later without reworking the app.
 
 ## User Interface
 
-To be defined by you. Layout, screens, navigation and look are all open. Nothing in this plan assumes any of them.
+Defined by you. Anything not written here is still open; nothing has been assumed.
 
-- [ ] UI ideas captured
+**Your ideas so far:**
+- Terminal-based design: a text-based UI with some personality
+- Looks complex but is actually pretty intuitive
+- Arrow keys work everywhere, so a mouse is never needed
+- Keyboard first, mouse optional: clicking also works for people who want it
+- Runs as its own Mac app window (with a Dock icon) styled like a terminal, not inside Terminal or iTerm
+
+- [ ] UI ideas captured (in progress)
 - [ ] Screens and layout agreed
 
 ## Open questions
 
-1. **Anything else** to plan for?
+1. **Habit tracker trigger:** does opening an existing note page count, or only creating a new one?
+2. **Anything else** to plan for?
