@@ -20,20 +20,20 @@ Each study project has a title, related scriptures and notes.
 
 - [ ] Create a study project (title, date started)
 - [ ] Related scriptures list: add, remove and reorder references, for example "Philippians 4:6, 7"
-- [ ] Notes area with basic formatting
+- [ ] Notes field
 - [ ] Edit or delete a project
-- [ ] List all projects, newest first
+- [ ] View all projects
 - [ ] Search projects by title, scripture or note text
 - [ ] Tags or categories (optional, also used by the random topic picker)
 - [ ] Mark a project as "in progress" or "finished"
 - [ ] Export or back up notes to a file
-- [ ] **AI slot (later):** an empty "Assistant" panel on each project, kept out of the way until an AI provider is connected
+- [ ] **AI slot (later):** a way for each project to connect to an AI provider later
 
 ## Feature 2 — Random Topic Button
 
 For sessions when you don't have a subject in mind.
 
-- [ ] One button that suggests a topic
+- [ ] A button that suggests a topic
 - [ ] Skip topics studied recently (the length of "recently" is a setting)
 - [ ] Favor topics never studied
 - [ ] "Give me another" (reroll)
@@ -50,7 +50,7 @@ For sessions when you don't have a subject in mind.
   - Personal study session
 - [ ] A new week's list is generated automatically each week
 - [ ] Each task has an optional detail field (chapters, article title)
-- [ ] Check items off; progress shown for the week
+- [ ] Check items off
 - [ ] Add one-off tasks for just this week
 - [ ] Unfinished tasks: carry them over or let them drop (setting)
 - [ ] Choose the day the week starts (to match meeting days)
@@ -69,9 +69,15 @@ The goal is that AI can be added later without reworking the app.
 - [ ] Choose a desktop framework (candidates: Tauri or Electron)
 - [ ] Local database (for example SQLite)
 - [ ] Backup and restore
-- [ ] Simple, calm, readable design
 
 ---
+
+## User Interface
+
+To be defined by you. Layout, screens, navigation and look are all open. Nothing in this plan assumes any of them.
+
+- [ ] UI ideas captured
+- [ ] Screens and layout agreed
 
 ## Open questions
 
@@ -79,5 +85,4 @@ The goal is that AI can be added later without reworking the app.
 2. **Scripture text:** only store references like "John 17:3", or show the verse text too? Showing text would require a Bible translation you're allowed to bundle, or pasting verses in yourself.
 3. **Topic categories or mood filters,** such as "encouragement" or "something I'm dealing with": wanted or not?
 4. **Mac, Windows, or both?**
-5. **Where the AI panel goes:** inside each note, or a separate screen?
-6. **Anything else** to plan for: reminders, study streaks, a reading tracker?
+5. **Anything else** to plan for: reminders, study streaks, a reading tracker?
