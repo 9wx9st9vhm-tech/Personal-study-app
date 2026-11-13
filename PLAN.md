@@ -10,7 +10,7 @@ A desktop app for personal Bible study: organized study notes, a random topic pi
 - **Storage:** This device only, with export and backup to a file
 - **Weekly to-do:** Recurring templates. You set your routine once, the app creates the tasks each week, and you add the specific chapters or articles. Nothing is pulled from jw.org, so there's no conflict with its Terms of Use.
 - **Random topic:** Skips recently studied topics and favors ones not yet covered
-- **Apple Calendar:** One-way, Calendar → To-do. The app reads only a dedicated meeting-parts calendar.
+- **Apple Calendar:** Later, not version 1. One-way, Calendar → To-do. The app reads only a dedicated meeting-parts calendar.
 - **AI:** Not in version 1, but the design leaves a slot for Claude or a local LLM
 
 ---
@@ -56,7 +56,7 @@ For sessions when you don't have a subject in mind.
 - [ ] Unfinished tasks: carry them over or let them drop (setting)
 - [ ] Choose the day the week starts (to match meeting days)
 
-## Feature 3b — Apple Calendar: Meeting Parts
+## Feature 3b — Apple Calendar: Meeting Parts (later, not version 1)
 
 Your meeting parts arrive in Apple Calendar from a congregation scheduling app. The app reads them and adds them to the weekly to-do list. It never writes to your calendar.
 
