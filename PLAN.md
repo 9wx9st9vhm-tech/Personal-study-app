@@ -68,7 +68,8 @@ Your meeting parts arrive in Apple Calendar from a congregation scheduling app. 
 - [ ] Re-check for new or changed parts when the app opens
 - [ ] If a part is moved or removed in the calendar, update or remove its to-do
 - [ ] Don't create duplicates when the same part is read again
-- [ ] **Needs from you:** the name of the scheduling app, and a few example event titles, so the app can tell part types apart (for example a Bible reading versus a talk)
+- [ ] **Source:** NW Publisher (the publisher app for NW Scheduler). How it puts assignments on the calendar is not confirmed yet: a subscribed calendar, events added one at a time, or something else.
+- [ ] **Needs from you:** which calendar the parts appear under in Apple Calendar, and a few example event titles, so the app can tell part types apart (for example a Bible reading versus a talk)
 
 ## Feature 4 — AI Plug-in Slot (later, not version 1)
 
