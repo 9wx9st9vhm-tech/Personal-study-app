@@ -13,7 +13,7 @@ A desktop app for personal Bible study: organized study notes, a random topic pi
 - **Apple Calendar:** Later, not version 1. One-way, Calendar → To-do. The app reads only a dedicated meeting-parts calendar.
 - **Topics:** A built-in starter list plus your own topics. No categories.
 - **Scriptures:** Stored as references only. Each one links to the verse in the New World Translation (JW Library or wol.jw.org). No verse text is stored in the app.
-- **Version 1 extras:** Study history and a Bible reading tracker
+- **Version 1 extras:** Study history with a habit tracker, and a Bible reading tracker
 - **AI:** Not in version 1, but the design leaves a slot for Claude or a local LLM
 
 ---
@@ -77,19 +77,22 @@ Your meeting parts arrive in Apple Calendar from a congregation scheduling app. 
 - [ ] **Source:** NW Publisher (the publisher app for NW Scheduler). How it puts assignments on the calendar is not confirmed yet: a subscribed calendar, events added one at a time, or something else.
 - [ ] **Needs from you:** which calendar the parts appear under in Apple Calendar, and a few example event titles, so the app can tell part types apart (for example a Bible reading versus a talk)
 
-## Feature 3c — Study History
+## Feature 3c — Study History and Habit Tracker
 
 - [ ] Log each study session automatically (date, topic or project)
 - [ ] View past sessions
 - [ ] Feeds the random topic button's "studied recently" check
-- [ ] Streak: consecutive days or weeks with a study session (which one is still open)
+- [ ] Habit tracker: a record of which days you used the app (no streak count)
+- [ ] A day is checked off automatically the first time you click anything in the app that day
+- [ ] Only one check-off per day, however many clicks
+- [ ] Days are counted by your Mac's local date and time
 
 ## Feature 3d — Bible Reading Tracker
 
 - [ ] All 66 books and 1,189 chapters, checked off chapter by chapter
 - [ ] Progress per book and overall
 - [ ] Date each chapter was read
-- [ ] Can be linked to the weekly Bible reading task in the to-do list (still open)
+- [ ] Kept separate from the weekly to-do; chapters are marked in the tracker only
 
 ## Feature 4 — AI Plug-in Slot (later, not version 1)
 
@@ -117,6 +120,4 @@ To be defined by you. Layout, screens, navigation and look are all open. Nothing
 
 ## Open questions
 
-1. **Streak:** count days or weeks?
-2. **Reading tracker and weekly to-do:** should checking off the weekly Bible reading also mark those chapters as read?
-3. **Anything else** to plan for?
+1. **Anything else** to plan for?
