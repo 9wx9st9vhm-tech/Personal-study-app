@@ -11,6 +11,9 @@ A desktop app for personal Bible study: organized study notes, a random topic pi
 - **Weekly to-do:** Recurring templates. You set your routine once, the app creates the tasks each week, and you add the specific chapters or articles. Nothing is pulled from jw.org, so there's no conflict with its Terms of Use.
 - **Random topic:** Skips recently studied topics and favors ones not yet covered
 - **Apple Calendar:** Later, not version 1. One-way, Calendar → To-do. The app reads only a dedicated meeting-parts calendar.
+- **Topics:** A built-in starter list plus your own topics. No categories.
+- **Scriptures:** Stored as references only. Each one links to the verse in the New World Translation (JW Library or wol.jw.org). No verse text is stored in the app.
+- **Version 1 extras:** Study history and a Bible reading tracker
 - **AI:** Not in version 1, but the design leaves a slot for Claude or a local LLM
 
 ---
@@ -21,11 +24,12 @@ Each study project has a title, related scriptures and notes.
 
 - [ ] Create a study project (title, date started)
 - [ ] Related scriptures list: add, remove and reorder references, for example "Philippians 4:6, 7"
+- [ ] Check that each reference is a real book, chapter and verse
+- [ ] Each reference opens the verse in the NWT (JW Library, or wol.jw.org as a fallback). The exact link format still needs checking.
 - [ ] Notes field
 - [ ] Edit or delete a project
 - [ ] View all projects
 - [ ] Search projects by title, scripture or note text
-- [ ] Tags or categories (optional, also used by the random topic picker)
 - [ ] Mark a project as "in progress" or "finished"
 - [ ] Export or back up notes to a file
 - [ ] **AI slot (later):** a way for each project to connect to an AI provider later
@@ -40,7 +44,9 @@ For sessions when you don't have a subject in mind.
 - [ ] "Give me another" (reroll)
 - [ ] "Start studying this" creates a new Study Notes project from the topic
 - [ ] Record what was picked and when
-- [ ] **Open question:** where topics come from (see below)
+- [ ] Built-in starter list of Bible topics
+- [ ] Add, edit and remove your own topics
+- [ ] Turn off any built-in topic you don't want suggested
 
 ## Feature 3 — Weekly To-Do
 
@@ -71,6 +77,20 @@ Your meeting parts arrive in Apple Calendar from a congregation scheduling app. 
 - [ ] **Source:** NW Publisher (the publisher app for NW Scheduler). How it puts assignments on the calendar is not confirmed yet: a subscribed calendar, events added one at a time, or something else.
 - [ ] **Needs from you:** which calendar the parts appear under in Apple Calendar, and a few example event titles, so the app can tell part types apart (for example a Bible reading versus a talk)
 
+## Feature 3c — Study History
+
+- [ ] Log each study session automatically (date, topic or project)
+- [ ] View past sessions
+- [ ] Feeds the random topic button's "studied recently" check
+- [ ] Streak: consecutive days or weeks with a study session (which one is still open)
+
+## Feature 3d — Bible Reading Tracker
+
+- [ ] All 66 books and 1,189 chapters, checked off chapter by chapter
+- [ ] Progress per book and overall
+- [ ] Date each chapter was read
+- [ ] Can be linked to the weekly Bible reading task in the to-do list (still open)
+
 ## Feature 4 — AI Plug-in Slot (later, not version 1)
 
 The goal is that AI can be added later without reworking the app.
@@ -97,7 +117,6 @@ To be defined by you. Layout, screens, navigation and look are all open. Nothing
 
 ## Open questions
 
-1. **Topic sources for the random button:** a built-in starter list, your own list, or both?
-2. **Scripture text:** only store references like "John 17:3", or show the verse text too? Showing text would require a Bible translation you're allowed to bundle, or pasting verses in yourself.
-3. **Topic categories or mood filters,** such as "encouragement" or "something I'm dealing with": wanted or not?
-4. **Anything else** to plan for: reminders, study streaks, a reading tracker?
+1. **Streak:** count days or weeks?
+2. **Reading tracker and weekly to-do:** should checking off the weekly Bible reading also mark those chapters as read?
+3. **Anything else** to plan for?
