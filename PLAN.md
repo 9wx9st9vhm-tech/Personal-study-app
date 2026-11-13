@@ -6,10 +6,11 @@ A desktop app for personal Bible study: organized study notes, a random topic pi
 
 ## Decisions so far
 
-- **Platform:** Desktop app
+- **Platform:** Desktop app, Mac only
 - **Storage:** This device only, with export and backup to a file
 - **Weekly to-do:** Recurring templates. You set your routine once, the app creates the tasks each week, and you add the specific chapters or articles. Nothing is pulled from jw.org, so there's no conflict with its Terms of Use.
 - **Random topic:** Skips recently studied topics and favors ones not yet covered
+- **Apple Calendar:** One-way, Calendar → To-do. The app reads only a dedicated meeting-parts calendar.
 - **AI:** Not in version 1, but the design leaves a slot for Claude or a local LLM
 
 ---
@@ -55,6 +56,20 @@ For sessions when you don't have a subject in mind.
 - [ ] Unfinished tasks: carry them over or let them drop (setting)
 - [ ] Choose the day the week starts (to match meeting days)
 
+## Feature 3b — Apple Calendar: Meeting Parts
+
+Your meeting parts arrive in Apple Calendar from a congregation scheduling app. The app reads them and adds them to the weekly to-do list. It never writes to your calendar.
+
+- [ ] Ask for calendar permission (macOS prompts once)
+- [ ] You choose which calendar to read (the dedicated meeting-parts calendar)
+- [ ] Read upcoming events from that calendar only
+- [ ] Each part becomes a to-do item in the week it falls in, with its date and title
+- [ ] Optional prep task ahead of the part (how many days before is a setting)
+- [ ] Re-check for new or changed parts when the app opens
+- [ ] If a part is moved or removed in the calendar, update or remove its to-do
+- [ ] Don't create duplicates when the same part is read again
+- [ ] **Needs from you:** the name of the scheduling app, and a few example event titles, so the app can tell part types apart (for example a Bible reading versus a talk)
+
 ## Feature 4 — AI Plug-in Slot (later, not version 1)
 
 The goal is that AI can be added later without reworking the app.
@@ -66,7 +81,7 @@ The goal is that AI can be added later without reworking the app.
 
 ## Feature 5 — Foundation
 
-- [ ] Choose a desktop framework (candidates: Tauri or Electron)
+- [ ] Choose a desktop framework. Candidates: native Swift (direct calendar access, Mac only), Tauri or Electron (both need a small native bridge for calendar access)
 - [ ] Local database (for example SQLite)
 - [ ] Backup and restore
 
@@ -84,5 +99,4 @@ To be defined by you. Layout, screens, navigation and look are all open. Nothing
 1. **Topic sources for the random button:** a built-in starter list, your own list, or both?
 2. **Scripture text:** only store references like "John 17:3", or show the verse text too? Showing text would require a Bible translation you're allowed to bundle, or pasting verses in yourself.
 3. **Topic categories or mood filters,** such as "encouragement" or "something I'm dealing with": wanted or not?
-4. **Mac, Windows, or both?**
-5. **Anything else** to plan for: reminders, study streaks, a reading tracker?
+4. **Anything else** to plan for: reminders, study streaks, a reading tracker?
