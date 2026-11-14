@@ -398,7 +398,7 @@ textarea.stop.focused {
   margin: 0 0 0.6em;
   color: var(--accent);
   font-size: 9px;
-  line-height: 1.05;
+  line-height: 1;
   overflow: hidden;
 }
 .greet {
