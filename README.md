@@ -13,7 +13,15 @@ Everything is saved on your Mac. Nothing is sent anywhere.
 
 ## Running it on your Mac
 
-This only needs to be set up once and takes about 20 minutes.
+**The easy way:** open Terminal (⌘ Space, type "Terminal") and paste this one line:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/9wx9st9vhm-tech/Personal-study-app/claude/serene-knuth-6ljbl9/setup-mac.sh | bash
+```
+
+It installs everything the app needs, builds it, puts it in your Applications folder and opens it. The first run takes 10–20 minutes. Run the same line again later to update. You can read [`setup-mac.sh`](setup-mac.sh) first to see exactly what it does.
+
+**By hand,** if you'd rather do each step yourself:
 
 1. **Install Apple's developer tools.** Open Terminal and run:
    ```sh
@@ -27,7 +35,7 @@ This only needs to be set up once and takes about 20 minutes.
    Close Terminal and open it again afterwards.
 4. **Get the code and install its packages:**
    ```sh
-   git clone https://github.com/9wx9st9vhm-tech/Personal-study-app.git
+   git clone --branch claude/serene-knuth-6ljbl9 https://github.com/9wx9st9vhm-tech/Personal-study-app.git
    cd Personal-study-app
    npm install
    ```
