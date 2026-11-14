@@ -2,7 +2,7 @@
 
 A desktop app for personal Bible study: organized study notes, a random topic picker for sessions without a plan, and a weekly to-do list for meeting preparation.
 
-**Status:** Planning. Nothing is built yet.
+**Status:** Version 1 built (14 Nov 2026). Apple Calendar and AI are still to come. See README.md for how to run it.
 
 ## Decisions so far
 
@@ -23,45 +23,45 @@ A desktop app for personal Bible study: organized study notes, a random topic pi
 
 Each study project has a title, related scriptures and notes.
 
-- [ ] Create a study project (title, date started)
-- [ ] Related scriptures list: add, remove and reorder references, for example "Philippians 4:6, 7"
-- [ ] Check that each reference is a real book, chapter and verse
-- [ ] Each reference opens the verse in the NWT (JW Library, or wol.jw.org as a fallback). The exact link format still needs checking.
-- [ ] Notes field
-- [ ] Edit or delete a project
-- [ ] View all projects
-- [ ] Search projects by title, scripture or note text
-- [ ] Mark a project as "in progress" or "finished"
-- [ ] Export or back up notes to a file
-- [ ] **AI slot (later):** a way for each project to connect to an AI provider later
+- [x] Create a study project (title, date started)
+- [x] Related scriptures list: add, remove and reorder references, for example "Philippians 4:6, 7"
+- [x] Check that each reference is a real book, chapter and verse
+- [x] Each reference opens the verse in the NWT, on jw.org or in the JW Library app (a setting). Uses jw.org's share-link format, which isn't officially documented.
+- [x] Notes field
+- [x] Edit or delete a project
+- [x] View all projects
+- [x] Search projects by title, scripture or note text
+- [x] Mark a project as "in progress" or "finished"
+- [x] Export or back up notes to a file
+- [x] **AI slot (later):** each note page has an Assistant panel, empty until an AI is connected
 
 ## Feature 2 — Random Topic Button
 
 For sessions when you don't have a subject in mind.
 
-- [ ] A button that suggests a topic
-- [ ] Skip topics studied recently (the length of "recently" is a setting)
-- [ ] Favor topics never studied
-- [ ] "Give me another" (reroll)
-- [ ] "Start studying this" creates a new Study Notes project from the topic
-- [ ] Record what was picked and when
-- [ ] Built-in starter list of Bible topics
-- [ ] Add, edit and remove your own topics
-- [ ] Turn off any built-in topic you don't want suggested
+- [x] A button that suggests a topic
+- [x] Skip topics studied recently (the length of "recently" is a setting)
+- [x] Favor topics never studied
+- [x] "Give me another" (reroll)
+- [x] "Start studying this" creates a new Study Notes project from the topic
+- [x] Record what was picked and when
+- [x] Built-in starter list of Bible topics
+- [x] Add, edit and remove your own topics
+- [x] Turn off any built-in topic you don't want suggested
 
 ## Feature 3 — Weekly To-Do
 
-- [ ] Recurring task templates, for example:
+- [x] Recurring task templates, for example:
   - Midweek meeting preparation
   - Watchtower Study preparation
   - Weekly Bible reading
   - Personal study session
-- [ ] A new week's list is generated automatically each week
-- [ ] Each task has an optional detail field (chapters, article title)
-- [ ] Check items off
-- [ ] Add one-off tasks for just this week
-- [ ] Unfinished tasks: carry them over or let them drop (setting)
-- [ ] Choose the day the week starts (to match meeting days)
+- [x] A new week's list is generated automatically each week
+- [x] Each task has an optional detail field (chapters, article title)
+- [x] Check items off
+- [x] Add one-off tasks for just this week
+- [x] Unfinished tasks: carry them over or let them drop (setting)
+- [x] Choose the day the week starts (to match meeting days)
 
 ## Feature 3b — Apple Calendar: Meeting Parts (later, not version 1)
 
@@ -80,36 +80,36 @@ Your meeting parts arrive in Apple Calendar from a congregation scheduling app. 
 
 ## Feature 3c — Study History and Habit Tracker
 
-- [ ] Log each study session automatically (date, topic or project)
-- [ ] View past sessions
-- [ ] Feeds the random topic button's "studied recently" check
-- [ ] Habit tracker: a record of which days you used the app (no streak count)
-- [ ] A day is checked off automatically when you start a note page that day
-- [ ] Only one check-off per day
-- [ ] Days are counted by your Mac's local date and time
+- [x] Log each study session automatically (date, topic or project)
+- [x] View past sessions
+- [x] Feeds the random topic button's "studied recently" check
+- [x] Habit tracker: a record of which days you used the app (no streak count)
+- [x] A day is checked off automatically when you start a note page that day
+- [x] Only one check-off per day
+- [x] Days are counted by your Mac's local date and time
 
 ## Feature 3d — Bible Reading Tracker
 
-- [ ] All 66 books and 1,189 chapters, checked off chapter by chapter
-- [ ] Progress per book and overall
-- [ ] Date each chapter was read
-- [ ] Kept separate from the weekly to-do; chapters are marked in the tracker only
+- [x] All 66 books and 1,189 chapters, checked off chapter by chapter
+- [x] Progress per book and overall
+- [x] Date each chapter was read
+- [x] Kept separate from the weekly to-do; chapters are marked in the tracker only
 
 ## Feature 4 — AI Plug-in Slot (later, not version 1)
 
 The goal is that AI can be added later without reworking the app.
 
-- [ ] One internal "assistant" interface that any provider can plug into
+- [x] One internal "assistant" interface that any provider can plug into (src/ai.ts)
 - [ ] Provider options: Claude (API key) or a local LLM (for example Ollama or LM Studio)
 - [ ] Possible uses: suggest related scriptures, summarize notes, generate questions to think about
-- [ ] AI is off by default; notes never leave the device unless a cloud provider is turned on
+- [x] AI is off by default; notes never leave the device unless a cloud provider is turned on
 
 ## Feature 5 — Foundation
 
 - [x] Desktop framework chosen: Tauri + TypeScript
 - [ ] Apple Calendar (later) will need a small Swift add-on, because Tauri can't reach Calendar directly
-- [ ] Local database (for example SQLite)
-- [ ] Backup and restore
+- [x] Local storage: one JSON data file, written safely, with 14 daily backups
+- [x] Backup and restore
 
 ---
 
@@ -124,10 +124,9 @@ Defined by you. Anything not written here is still open; nothing has been assume
 - Keyboard first, mouse optional: clicking also works for people who want it
 - Runs as its own Mac app window (with a Dock icon) styled like a terminal, not inside Terminal or iTerm
 
-- [ ] UI ideas captured (in progress)
-- [ ] Screens and layout agreed
+- [x] UI ideas captured
+- [x] First version of every screen built by Claude, yours to change: amber/green/ice/paper themes, ASCII logo, start-up animation, optional scanlines
 
 ## Open questions
 
-1. **Habit tracker trigger:** does opening an existing note page count, or only creating a new one?
-2. **Anything else** to plan for?
+1. **Anything else** to plan for?

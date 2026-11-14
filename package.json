@@ -1,0 +1,25 @@
+{
+  "name": "personal-study",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "check": "tsc --noEmit",
+    "tauri": "tauri",
+    "app": "tauri dev",
+    "app:build": "tauri build"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "2.12.4",
+    "@tauri-apps/plugin-opener": "2.7.3"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.12.4",
+    "typescript": "5.9.3",
+    "vite": "7.3.8",
+    "vitest": "3.2.7"
+  }
+}

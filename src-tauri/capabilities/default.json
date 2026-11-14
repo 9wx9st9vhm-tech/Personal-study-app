@@ -1,0 +1,14 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "What the main window is allowed to do.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-destroy",
+    {
+      "identifier": "opener:allow-open-url",
+      "allow": [{ "url": "https://www.jw.org/*" }, { "url": "https://wol.jw.org/*" }, { "url": "jwlibrary:*" }]
+    }
+  ]
+}
