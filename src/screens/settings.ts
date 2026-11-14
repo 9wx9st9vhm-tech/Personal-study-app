@@ -18,6 +18,7 @@ interface Setting {
 }
 
 const THEMES: { id: ThemeName; label: string }[] = [
+  { id: "white", label: "white" },
   { id: "amber", label: "amber" },
   { id: "phosphor", label: "green phosphor" },
   { id: "ice", label: "ice blue" },
@@ -83,7 +84,7 @@ export function settingsScreen(app: App): Screen {
   const items: Setting[] = [
     {
       label: "Theme",
-      value: () => THEMES.find((t) => t.id === s().theme)!.label,
+      value: () => THEMES.find((t) => t.id === s().theme)?.label ?? s().theme,
       change: (dir) => set(() => (s().theme = cycle(THEMES.map((t) => t.id), s().theme, dir))),
     },
     {

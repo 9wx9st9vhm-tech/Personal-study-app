@@ -1,7 +1,6 @@
 /* The terminal look. Colors come from the theme variables at the top, so a
    new theme is just a new block of variables. */
 
-:root,
 [data-theme="amber"] {
   --bg: #0d0902;
   --panel: #140e04;
@@ -40,6 +39,20 @@
   --ok: #8df0c6;
   --warn: #ff9b7a;
   --glow: rgba(108, 199, 255, 0.3);
+}
+:root,
+[data-theme="white"] {
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --fg: #000000;
+  --dim: #5c5c5c;
+  --faint: #cfcfcf;
+  --accent: #000000;
+  --sel-bg: #000000;
+  --sel-fg: #ffffff;
+  --ok: #1d6b1d;
+  --warn: #b00020;
+  --glow: transparent;
 }
 [data-theme="paper"] {
   --bg: #f3ead6;
@@ -85,6 +98,9 @@ body {
   pointer-events: none;
   background: repeating-linear-gradient(to bottom, transparent 0 2px, rgba(0, 0, 0, 0.18) 2px 3px);
   z-index: 100;
+}
+.scanlines[data-theme="white"] body::after {
+  background: none;
 }
 .scanlines[data-theme="paper"] body::after {
   background: repeating-linear-gradient(to bottom, transparent 0 2px, rgba(60, 40, 10, 0.05) 2px 3px);
@@ -593,6 +609,7 @@ textarea.stop.focused {
   background: rgba(0, 0, 0, 0.55);
   z-index: 50;
 }
+[data-theme="white"] .overlay,
 [data-theme="paper"] .overlay {
   background: rgba(58, 44, 23, 0.25);
 }

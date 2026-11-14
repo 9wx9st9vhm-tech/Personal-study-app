@@ -65,7 +65,7 @@ export interface Session {
   at: string; // ISO timestamp of the first open that day
 }
 
-export type ThemeName = "amber" | "phosphor" | "ice" | "paper";
+export type ThemeName = "white" | "amber" | "phosphor" | "ice" | "paper";
 export type AIProvider = "off" | "claude" | "local";
 
 export interface Settings {
@@ -80,6 +80,8 @@ export interface Settings {
   linkTarget: LinkTarget;
   /** Reserved for the AI plug-in. Always "off" in version 1. */
   aiProvider: AIProvider;
+  /** Bumped when the default look changes, so existing installs switch once. */
+  lookVersion?: number;
 }
 
 export interface AppData {
@@ -104,7 +106,7 @@ export function newId(): string {
 }
 
 export const DEFAULT_SETTINGS: Settings = {
-  theme: "amber",
+  theme: "white",
   bootAnimation: true,
   scanlines: true,
   recentDays: 30,
@@ -112,6 +114,7 @@ export const DEFAULT_SETTINGS: Settings = {
   carryOver: true,
   linkTarget: "web",
   aiProvider: "off",
+  lookVersion: 2,
 };
 
 export const DEFAULT_TEMPLATES: string[] = [
@@ -157,6 +160,11 @@ export function normalizeData(raw: unknown, builtInTopics: Topic[]): AppData {
     settings: { ...DEFAULT_SETTINGS, ...(d.settings ?? {}) },
     lastProjectId: d.lastProjectId,
   };
+  // Version 2 made white the default; switch existing installs over once.
+  if (d.settings && (d.settings.lookVersion ?? 1) < 2) {
+    data.settings.theme = "white";
+    data.settings.lookVersion = 2;
+  }
   const known = new Set(data.topics.map((t) => t.id));
   for (const t of builtInTopics) if (!known.has(t.id)) data.topics.push({ ...t });
   return data;

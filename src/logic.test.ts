@@ -170,8 +170,9 @@ describe("weekly to-do", () => {
 
 describe("loading saved data", () => {
   it("fills in anything missing and adds new built-in topics", () => {
-    const data = normalizeData({ projects: [], settings: { theme: "paper" } }, BUILT_IN_TOPICS);
+    const data = normalizeData({ projects: [], settings: { theme: "paper", lookVersion: 2 } }, BUILT_IN_TOPICS);
     expect(data.settings.theme).toBe("paper");
+    expect(normalizeData({ settings: { theme: "amber" } }, BUILT_IN_TOPICS).settings.theme).toBe("white");
     expect(data.settings.weekStart).toBe(1);
     expect(data.topics).toHaveLength(BUILT_IN_TOPICS.length);
     expect(data.templates).toHaveLength(4);
